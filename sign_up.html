@@ -63,39 +63,24 @@
         <div id="page13-content" style="margin-bottom: 100px;">
             <div id="page13-text">
                 <form action="javascript:void(0)">
-                    <form class="cd-form">
-                        <div class="inputWithIcon">
-                          <input type="text" placeholder="Your name">
-                          <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
-                        </div>
-                         
-                        <div class="inputWithIcon">
-                          <input type="text" placeholder="Email">
-                          <i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
-                        </div>
-                         
-                        <div class="inputWithIcon">
-                          <input type="text" placeholder="Phone Number">
-                          <i class="fa fa-phone fa-lg fa-fw" aria-hidden="true"></i>
-                        </div>
-                         
-                        <div class="inputWithIcon inputIconBg">
-                          <input type="text" placeholder="Your name">
-                          <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
-                        </div>
-                         
-                        <div class="inputWithIcon inputIconBg">
-                          <input type="text" placeholder="Email">
-                          <i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
-                        </div>
-                         
-                        <div class="inputWithIcon inputIconBg">
-                          <input type="text" placeholder="Phone Number">
-                          <i class="fa fa-phone fa-lg fa-fw" aria-hidden="true"></i>
-                        </div>
-                         
-                        <input type="text" placeholder="Age">
-                    </form>
+                    <div class="row">
+                      <div class="col">
+                        <i class="far fa-user icon"></i><input type="text" class="form-control bg-dark text-white" id="email" placeholder="Full name" name="fname">
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control bg-dark text-white" placeholder="Email" name="email">
+                      </div>
+                    </div>
+                    <div class="row" style="margin-top: 50px">
+                      <div class="col">
+                        <input type="phone" class="form-control bg-dark text-white" id="email" placeholder="Phone" name="phone">
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control bg-dark text-white" placeholder="Choose subject" name="subject">
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-dark btn-primary mt-3" style="margin-top: 50px !important">Submit</button>
+                  </form>
             </div> 
         </div>
     </div>
