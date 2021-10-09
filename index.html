@@ -11,11 +11,19 @@
     <script src="https://git.blivesta.com/chaffle/chaffle.min.js"></script>
     <script src="https://kit.fontawesome.com/5dc9495616.js" crossorigin="anonymous"></script>
     <script src="./js/main.js" defer></script>
+    <script src="./js/animateOnScroll.js" defer></script>
+    <script type = "text/javascript">
+        function getPositionXY(element) {
+            var rect = element.getBoundingClientRect();
+            console.log('Y: ' + rect.y)
+        }
+    </script>
     <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
     <title>Demo Project</title>
 
 </head>
-<body>
+<body onmouseover="getPositionXY(this)">
     <div id="page1" class="bg-image img1">
         <div id="navbar">
             <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
@@ -52,11 +60,11 @@
             </nav>
         </div>
         <div id="button">
-            <button class="cybr-btn">
+            <a href="./sign_up.html"><button class="cybr-btn">
                 PLAY NOW
                 <span aria-hidden class="cybr-btn__glitch">PLAY NOW</span>
-            </button>
-            <a class="play-btn" href="#" style="top:31rem; left:25%;"></a>
+            </button></a>
+            <a class="play-btn" href="./sign_up.html" style="top:31rem; left:25%;"></a>
         </div>
     </div>
     <div id="page2" class="bg-image img2">
@@ -65,72 +73,74 @@
                 Featured Games
             </div>
             <div id="page2-btn" style="margin-left: 10rem">
-                <div class="rounded-circle" style="background-color: #CD242C; width: 15px;height: 15px;"></div>
-                <div class="rounded-circle" style="background-color: rgba(255, 255, 255, .3); width: 15px;height: 15px;"></div>
-                <div class="rounded-circle" style="background-color: rgba(255, 255, 255, .3); width: 15px;height: 15px;"></div>
+                <div class="dot dot-active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
                 <button class="button" style="margin-left: 30px"><i class="fas fa-chevron-left"></i></button>
                 <button class="button"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
-        <div id="page2-content">
-            <div class="grid3x1-parent">
-                <div class="grid3x1-div1">
-                    <div><img src="images/image.png"></div>
+        <div id="slideshow1">
+            <div class="mySlides">
+                <div class="grid3x1-parent">
+                    <div class="grid3x1-div1">
+                        <div class="image-holder-box" style="width: 350px; height: 300px; position: relative;"><img src="images/image11.jpg" class="image-box" style="width: 100%; height: 100%;object-position: 20% 100%;"></div>
+                    </div>
+                    <div class="grid3x1-div2">
+                        <div class="image-holder-box" style="width: 350px; height: 300px; position: relative;"><img src="images/image12.jpg" class="image-box" style="width: 100%; height: 100%;object-position: 60% 100%;"></div>
+                    </div>
+                    <div class="grid3x1-div3">
+                        <div class="image-holder-box" style="width: 350px; height: 300px; position: relative;"><img src="images/image1.jpg" class="image-box" style="width: 100%; height: 100%;object-position: 30% 100%;"></div>
+                    </div>
+                </div> 
+                <div class="grid3x1-parent" style="padding-top: 10px !important;">
+                    <div class="grid3x1-div1">
+                        <div class="rts-btn">RTS</div>
+                    </div>
+                    <div class="grid3x1-div2">
+                        <div class="rts-btn">RTS</div>
+                    </div>
+                    <div class="grid3x1-div3">
+                        <div class="rts-btn">RTS</div>
+                    </div>
+                </div> 
+                <div class="grid3x1-parent" style="text-align:left; font-size: 20px;">
+                    <div class="grid3x1-div1">
+                        <span>Anaconda XD3</span><br>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star ckecked"></span>
+                        <span class="rating">4.9</span>
+                        <br>
+                        <span style="font-weight: normal;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><br>
+                        <button class="dark-btn">Play Now</button>
+                    </div>
+                    <div class="grid3x1-div2">
+                        <span>Fukusin Cupson</span><br>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star ckecked"></span>
+                        <span class="rating">4.9</span><br>
+                        <span style="font-weight: normal;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><br>
+                        <button class="dark-btn">Play Now</button>
+                    </div>
+                    <div class="grid3x1-div3">
+                        <span>Sizuks Puzz 326</span><br>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star ckecked"></span>
+                        <span class="rating">4.9</span><br>
+                        <span style="font-weight: normal;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><br>
+                        <button class="dark-btn">Read more</button>
+                    </div>
                 </div>
-                <div class="grid3x1-div2">
-                    <div><img src="images/image.png"></div>
-                </div>
-                <div class="grid3x1-div3">
-                    <div><img src="images/image.png"></div>
-                </div>
-            </div> 
-            <div class="grid3x1-parent" style="padding-top: 10px !important;">
-                <div class="grid3x1-div1">
-                    <div class="rts-btn">RTS</div>
-                </div>
-                <div class="grid3x1-div2">
-                    <div class="rts-btn">RTS</div>
-                </div>
-                <div class="grid3x1-div3">
-                    <div class="rts-btn">RTS</div>
-                </div>
-            </div> 
-            <div class="grid3x1-parent" style="text-align:left; font-size: 20px;">
-                <div class="grid3x1-div1">
-                    <span>Anaconda XD3</span><br>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star ckecked"></span>
-                    <span class="rating">4.9</span>
-                    <br>
-                    <span style="font-weight: normal;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><br>
-                    <button class="dark-btn">Read more</button>
-                </div>
-                <div class="grid3x1-div2">
-                    <span>Fukusin Cupson</span><br>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star ckecked"></span>
-                    <span class="rating">4.9</span><br>
-                    <span style="font-weight: normal;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><br>
-                    <button class="dark-btn">Read more</button>
-                </div>
-                <div class="grid3x1-div3">
-                    <span>Sizuks Puzz 326</span><br>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star ckecked"></span>
-                    <span class="rating">4.9</span><br>
-                    <span style="font-weight: normal;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><br>
-                    <button class="dark-btn">Read more</button>
-                </div>
-            </div> 
+            </div>
         </div>
     </div>
     <div id="page3" class="bg-image img3">
@@ -143,21 +153,21 @@
             <hr style="border-top: 3px solid red; width: 110px">
         </div>
         <div class="grid3x1-parent" style="padding-top: 10px !important;margin-left: 350px !important;margin-right: 400px !important;">
-            <div class="grid3x1-div1">
+            <div class="grid3x1-div1 animate__animated bounceInLeft">
                 <div class="gradient-box" style="background: linear-gradient(to bottom, #C8242D 0%, #151A20 100%);">
                     <div style="font-size: 100px;color: white; text-align: center"><i class="far fa-user-circle"></i></div>
                     <p id="page3-text">Create Your Account</p>
                     <p id="page3-text" style="font-size: 150px;">01</p>
                 </div>
             </div>
-            <div class="grid3x1-div2">
+            <div class="grid3x1-div2 animate__animated animate__delay-1s bounceInUp">
                 <div class="gradient-box" style="background: linear-gradient(to top, #C8242D 0%, #151A20 100%);">
                     <div style="font-size: 100px;color: white; text-align: center"><i class="fas fa-gamepad"></i></div>
                     <p id="page3-text">Choose your game</p>
                     <p id="page3-text" style="font-size: 150px;">02</p>
                 </div>
             </div>
-            <div class="grid3x1-div3">
+            <div class="grid3x1-div3 animate__animated animate__delay-2s bounceInRight">
                 <div class="gradient-box" style="background: linear-gradient(to top, #C8242D 0%, #151A20 100%);">
                     <div style="font-size: 100px;color: white; text-align: center"><i class="fas fa-puzzle-piece"></i></div>
                     <p id="page3-text">Injoy Your Game</p>
@@ -194,12 +204,96 @@
               </nav>
             </div>
             <div id="page4-content" class="grid3x2-parent">
-                <div class="grix3x2-div1"><img src="images/image1.png"></div>
-                <div class="grix3x2-div2"><img src="images/image1.png"></div>
-                <div class="grix3x2-div3"><img src="images/image1.png"></div>
-                <div class="grix3x2-div4"><img src="images/image1.png"></div>
-                <div class="grix3x2-div5"><img src="images/image1.png"></div>
-                <div class="grix3x2-div6"><img src="images/image1.png"></div> 
+                <div class="grix3x2-div1 animate__animated flipInX">
+                    <div class="polygon-box container">
+                        <img src="./images/image10.jpg" class="img-box">
+                        <div class="overlay"><div class="text">
+                            <span>Fukusin Cupson</span><br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star ckecked"></span>
+                            <span class="rating">4.9</span><br>
+                            <span>Lorem Ipsum is simply dtext of the printing and typesetting industry. Lorem Ipsum has</span><br>
+                        </div></div>
+                    </div>
+                </div>
+                <div class="grix3x2-div1 animate__animated animate__delay-1s flipInX">
+                    <div class="polygon-box container">
+                        <img src="./images/image3.jpg" class="img-box" style="position: absolute;">
+                            <div class="overlay"><div class="text">
+                            <span>Fukusin Cupson</span><br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star ckecked"></span>
+                            <span class="rating">4.9</span><br>
+                            <span>Lorem Ipsum is simply dtext of the printing and typesetting industry. Lorem Ipsum has</span><br>
+                        </div></div>
+                    </div>
+                </div>
+                <div class="grix3x2-div1 animate__animated animate__delay-2s flipInX">
+                    <div class="polygon-box container">
+                        <img src="./images/image1.jpg" class="img-box" style="position: absolute;">
+                            <div class="overlay"><div class="text">
+                            <span>Anaconda XD3</span><br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star ckecked"></span>
+                            <span class="rating">4.9</span><br>
+                            <span>Lorem Ipsum is simply dtext of the printing and typesetting industry. Lorem Ipsum has</span><br>
+                        </div></div>
+                    </div>
+                </div>
+                <div class="grix3x2-div1 animate__animated animate__delay-3s flipInX">
+                    <div class="polygon-box container">
+                        <img src="./images/image9.jpg" class="img-box" style="position: absolute;">
+                            <div class="overlay"><div class="text">
+                            <span>Fukusin Cupson</span><br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star ckecked"></span>
+                            <span class="rating">4.9</span><br>
+                            <span>Lorem Ipsum is simply dtext of the printing and typesetting industry. Lorem Ipsum has</span><br>
+                        </div></div>
+                    </div>
+                </div>
+                <div class="grix3x2-div1 animate__animated animate__delay-4s flipInX">
+                    <div class="polygon-box container">
+                        <img src="./images/image6.jpg" class="img-box" style="position: absolute;">
+                            <div class="overlay"><div class="text">
+                            <span>Fukusin Cupson</span><br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star ckecked"></span>
+                            <span class="rating">4.9</span><br>
+                            <span>Lorem Ipsum is simply dtext of the printing and typesetting industry. Lorem Ipsum has</span><br>
+                        </div></div>
+                    </div>
+                </div>
+                <div class="grix3x2-div1 animate__animated animate__delay-5s flipInX">
+                    <div class="polygon-box container">
+                        <img src="./images/image5.jpg" class="img-box" style="position: absolute;">
+                            <div class="overlay"><div class="text">
+                            <span>Fukusin Cupson</span><br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star ckecked"></span>
+                            <span class="rating">4.9</span><br>
+                            <span>Lorem Ipsum is simply dtext of the printing and typesetting industry. Lorem Ipsum has</span><br>
+                        </div></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -209,16 +303,16 @@
                 Highest Rated Games
             </div>
             <div id="page5-btn" style="margin-left: 10rem">
-                <div class="rounded-circle" style="background-color: #CD242C; width: 15px;height: 15px;"></div>
-                <div class="rounded-circle" style="background-color: rgba(255, 255, 255, .3); width: 15px;height: 15px;"></div>
-                <div class="rounded-circle" style="background-color: rgba(255, 255, 255, .3); width: 15px;height: 15px;"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
                 <button class="button" style="margin-left: 30px"><i class="fas fa-chevron-left"></i></button>
                 <button class="button"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
         <div class="grid2x1-parent" id="page5-content">
-            <div class="grid2x1-div1"><img class="gradient-box" style="width: 500px; height: 600px;"src="images/image2.jpg"></div>
-            <div class="grid2x1-div2"><img class="gradient-box" style="width: 500px; height: 600px;"src="images/image2.jpg"></div>
+            <div class="grid2x1-div1"><img class="gradient-box" style="width: 500px; height: 600px;"src="images/image16.jpg"></div>
+            <div class="grid2x1-div2"><img class="gradient-box" style="width: 500px; height: 600px;"src="images/image16.jpg"></div>
         </div> 
     </div>
     <div id="page6" class="bg-image img6">
@@ -232,21 +326,21 @@
         </div>
         <div id="page6-content" style="margin-left: 500px; margin-right: 500px">
             <div class="grid2x1-parent" style="margin-top: 50px;">
-                <div class="grid2x1-div1 avatar-polygon-box" style="width: 200px; height: 200px"><img src="images/avatar.png" style="margin-top: 30px"></div>
+                <div class="grid2x1-div1 hexagon-polygon-box" style="width: 200px; height: 200px"><img src="images/avatar.png" style="margin-top: 30px"></div>
                 <div class="grid2x1-div2 text-polygon-box" style="width: 600px; height: 200px">
                     <p id="page6-text" style="margin-left: 30px; margin-top: 30px;">Nijus Kuil</p><br>
                     <p style="margin-left: 30px; text-align: left;">Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem dummy text of the</p>
                 </div>
             </div> 
             <div class="grid2x1-parent" style="margin-top: 50px;">
-                <div class="grid2x1-div1 avatar-polygon-box" style="width: 200px; height: 200px"><img src="images/avatar.png" style="margin-top: 30px"></div>
+                <div class="grid2x1-div1 hexagon-polygon-box" style="width: 200px; height: 200px"><img src="images/avatar.png" style="margin-top: 30px"></div>
                 <div class="grid2x1-div2 text-polygon-box" style="width: 600px; height: 200px">
                     <p id="page6-text" style="margin-left: 30px; margin-top: 30px;">Kijjsun Goofs<br>
                     <p style="margin-left: 30px; text-align: left;">Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem dummy text of the</p>
                 </div>
             </div> 
             <div class="grid2x1-parent" style="margin-top: 50px;">
-                <div class="grid2x1-div1 avatar-polygon-box" style="width: 200px; height: 200px"><img src="images/avatar.png" style="margin-top: 30px"></div>
+                <div class="grid2x1-div1 hexagon-polygon-box" style="width: 200px; height: 200px"><img src="images/avatar.png" style="margin-top: 30px"></div>
                 <div class="grid2x1-div2 text-polygon-box" style="width: 600px; height: 200px">
                     <p id="page6-text" style="margin-left: 30px; margin-top: 30px;">Nijus Kuil</p><br>
                     <p style="margin-left: 30px; text-align: left;">Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem dummy text of the</p>
@@ -256,35 +350,35 @@
     </div>
     <div id="page7" class="bg-image img7">
         <div class="grid4x1-parent" id="page7-content">
-            <div class="grid4x1-div1 black-polygon-box" style="width: 300px; height: 180px;"><span style="color: #CA222F; font-weight: bold; font-size: 60px;">85k</span><p style="font-size: 30px;">Gamers</p></div>
-            <div class="grid4x1-div2 black-polygon-box" style="width: 300px; height: 180px;"><span style="color: #CA222F; font-weight: bold; font-size: 60px;">39m</span><p style="font-size: 30px;">Subcriver</p></div>
-            <div class="grid4x1-div3 black-polygon-box" style="width: 300px; height: 180px;"><span style="color: #CA222F; font-weight: bold; font-size: 60px;">96</span><p style="font-size: 30px;">Total Game</p></div>
-            <div class="grid4x1-div4 black-polygon-box" style="width: 300px; height: 180px;"><span style="color: #CA222F; font-weight: bold; font-size: 60px;">22k</span><p style="font-size: 30px;">Players</p></div>
+            <div class="grid4x1-div1 black-polygon-box animate__animated slideInDown" style="width: 300px; height: 180px;"><span style="color: #CA222F; font-weight: bold; font-size: 60px;">85k</span><p style="font-size: 30px;">Gamers</p></div>
+            <div class="grid4x1-div2 black-polygon-box animate__animated animate__delay-1s slideInDown" style="width: 300px; height: 180px;"><span style="color: #CA222F; font-weight: bold; font-size: 60px;">39m</span><p style="font-size: 30px;">Subcriver</p></div>
+            <div class="grid4x1-div3 black-polygon-box animate__animated animate__delay-2s slideInDown" style="width: 300px; height: 180px;"><span style="color: #CA222F; font-weight: bold; font-size: 60px;">96</span><p style="font-size: 30px;">Total Game</p></div>
+            <div class="grid4x1-div4 black-polygon-box animate__animated animate__delay-3s slideInDown" style="width: 300px; height: 180px;"><span style="color: #CA222F; font-weight: bold; font-size: 60px;">22k</span><p style="font-size: 30px;">Players</p></div>
         </div> 
-        <div class="page7-btn" style="margin-top: 50px">
-            <div id="page7-text">
+        <div class="page7-btn" class="animate__animated animate__delay-5s fadeInUp" style="margin-top: 50px">
+            <div id="page7-text" class="animate__animated animate__delay-5s fadeInUp">
                 Most Played Games
             </div>
-            <div id="page7-btn" style="margin-left: 10rem">
-                <div class="rounded-circle" style="background-color: #CD242C; width: 15px;height: 15px;"></div>
-                <div class="rounded-circle" style="background-color: rgba(255, 255, 255, .3); width: 15px;height: 15px;"></div>
-                <div class="rounded-circle" style="background-color: rgba(255, 255, 255, .3); width: 15px;height: 15px;"></div>
+            <div id="page7-btn" class="animate__animated animate__delay-4s fadeInUp" style="margin-left: 10rem">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
                 <button class="button" style="margin-left: 30px"><i class="fas fa-chevron-left"></i></button>
                 <button class="button"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
-        <div id="page7-grid">
-            <div class="grid3x1-parent">
+        <div id="page7-grid" class="animate__animated animate__delay-4s fadeInUp">
+            <div class="grid3x1-parent" style="height: 400px;">
                 <div class="grid3x1-div1">
-                    <div><img src="images/image.png"></div>
+                    <img src="images/image2.jpg" class="img-box" style="width: 400px; height: 400px;">
                 </div>
                 <div class="grid3x1-div2">
-                    <div><img src="images/image.png"></div>
+                    <img src="images/image3.jpg" class="img-box" style="width: 400px; height: 400px;">
                 </div>
                 <div class="grid3x1-div3">
-                    <div><img src="images/image.png"></div>
+                    <img src="images/image4.jpg" class="img-box" style="width: 400px; height: 400px;">
                 </div>
-            </div> 
+            </div><br>
             <div class="grid3x1-parent">
                 <div class="grid3x1-div1">
                     <div class="dark-box">
@@ -323,7 +417,7 @@
     </div>
     <div id="page8" class="bg-image img8">
         <div id="page8-content">
-            <img src="images/image3.jpg">
+            <img src="images/image4.jpg">
         </div>
         <div id="page8-content">
             <p id="page8-text" style="font-size: 30px;">Our gamers feedback</p>
@@ -351,13 +445,13 @@
         <div id="page9-content" style="margin-bottom: 100px;">
             <div class="grid3x1-parent">
                 <div class="grid3x1-div1">
-                    <div><img src="images/image4.png"></div>
+                    <div class="polygon-box" style="width: 400px; height: 400px;"><img src="images/image8.jpg" class="img-box"></div>
                 </div>
                 <div class="grid3x1-div2">
-                    <div><img src="images/image4.png"></div>
+                    <div class="polygon-box" style="width: 400px; height: 400px;"><img src="images/image6.jpg" class="img-box"></div>
                 </div>
                 <div class="grid3x1-div3">
-                    <div><img src="images/image4.png"></div>
+                    <div class="polygon-box" style="width: 400px; height: 400px;"><img src="images/image7.jpg" class="img-box"></div>
                 </div>
             </div>
         </div>

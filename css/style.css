@@ -1,13 +1,21 @@
-body,html {
-  height:100%;
-  background:#0A0E12;
-  scroll-behavior:smooth;
-  color:#fff;
+  body,html {
+    height:100%;
+    background:#0A0E12;
+    scroll-behavior:smooth;
+    color:#fff;
   }
   a {
     color: white !important;
     background-color: transparent;
     text-decoration: none;
+  }
+  hr{
+    margin-top: 0px !important;
+    margin-bottom: 5px !important;
+  }
+  .hidden{
+    visibility: hidden;
+    overflow: hidden;
   }
   .fa-star{
     color:#CF222C;
@@ -314,7 +322,7 @@ body,html {
   font-size:16px;
   cursor:pointer;
   margin:10px;
-  box-shadow:5px 5px 5px 5px #000;
+  filter: drop-shadow(0px 10px 5px rgba(0,0,0,0.1))
 }
 
 .button:hover {
@@ -322,11 +330,20 @@ body,html {
   color:#fff;
 }
 
-.rounded-circle {
+.dot {
   margin-top:15px;
   margin-left:5px;
+  background-color: rgba(255, 255, 255, .3);
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
 }
-
+.dot:hover{
+  background-color: #CD242C;
+}
+.dot-active{
+  background-color: #CD242C;
+}
 .page2-btn, .page5-btn, .page7-btn {
   display:flex;
   justify-content:space-between;
@@ -347,39 +364,14 @@ body,html {
   .dark-btn{
     background-color:#151A20;
     border: solid 1px black;  
-    box-shadow: 0px 0px 5px 5px rgba(128, 0, 0, 1);
     color: white;
     margin-top: 20px;
     width: 150px;
     height: 50px;
     clip-path: polygon(110% 0, 110% 55%, 80% 110%, 0 110%, 0 45%, 20% 0);
+    filter: drop-shadow(0px 10px 5px rgba(128,0,0,0.1))
   }
-  .dark-box{
-    background-color:#151A20;
-    border: solid 1px black;  
-    color: white;
-    text-align: center;
-    margin-top: 30px;
-    font-size: 20px;
-    text-transform: uppercase;
-    width: 400px;
-    height: 100px;
-    line-height: 50px;
-    clip-path: polygon(100% 0, 100% 55%, 95% 100%, 0 100%, 0 45%, 5% 0);
-  }
-  hr{
-    margin-top: 0px !important;
-    margin-bottom: 5px !important;
-  }
-  .gradient-box{
-    margin-top: 50px !important;
-    clip-path: polygon(15% 0, 100% 0, 100% 90%, 85% 100%, 0 100%, 0 15%);
-    width: 400px;
-    height: 400px;
-  }
-  .gradient-box:hover {
-    transform: scale(1.1);
-  }
+
   /* GRID */
   .grid3x2-parent {
     display: grid;
@@ -456,23 +448,74 @@ body,html {
     order: 0;
     color: white;
   }
+  /* BOX */
   .black-polygon-box {
     background-color: #151A20;
     text-transform: uppercase;
-    box-shadow: 0px 0px 10px 20px rgba(82, 84, 91, 1);
+    filter: drop-shadow(0px 10px 5px rgba(0,0,0,0.1));
     clip-path: polygon(5% 5%, 10% 0, 100% 0, 100% 75%, 85% 85%, 65% 85%, 52% 100%, 10% 100%, 0 90%, 0 31%, 5% 20%);
+    -webkit-clip-path: polygon(5% 5%, 10% 0, 100% 0, 100% 75%, 85% 85%, 65% 85%, 52% 100%, 10% 100%, 0 90%, 0 31%, 5% 20%);
   }
-  .avatar-polygon-box{
+  .hexagon-polygon-box{
     background-color: #151A20;
-    border-radius: 35px 35px 35px 35px; 
-    box-shadow: 0px 0px 10px 20px rgba(82, 84, 91, 1);
+    filter: drop-shadow(0px 10px 5px rgba(0,0,0,0.1));
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   }
   .text-polygon-box{
     background-color: #151A20;
     box-shadow: 0px 0px 10px 20px rgba(82, 84, 91, 1);
     clip-path: polygon(100% 0, 100% 65%, 90% 75%, 75% 75%, 65% 90%, 45% 90%, 30% 100%, 0 100%, 0 0);
+    -webkit-clip-path: polygon(100% 0, 100% 65%, 90% 75%, 75% 75%, 65% 90%, 45% 90%, 30% 100%, 0 100%, 0 0);
   }
+  .image-holder-box{
+    -webkit-clip-path: polygon(5% 10%, 10% 0, 15% 0, 20% 5%, 75% 5%, 80% 0, 100% 0, 100% 80%, 85% 95%, 76% 95%, 65% 100%, 10% 100%, 0 95%, 0 20%, 5% 15%); 
+    clip-path: polygon(5% 10%, 10% 0, 15% 0, 20% 5%, 75% 5%, 80% 0, 100% 0, 100% 80%, 85% 95%, 76% 95%, 65% 100%, 10% 100%, 0 95%, 0 20%, 5% 15%);
+    background-color: #151A20;
+    border: solid 30px #151A20;
+  }
+  .image-box{
+    object-fit: cover;
+    padding: 5px;
+  }
+  .dark-box{
+    background-color:#151A20;
+    border: solid 1px black;  
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 20px;
+    text-transform: uppercase;
+    width: 400px;
+    height: 100px;
+    line-height: 50px;
+    clip-path: polygon(100% 0, 100% 55%, 95% 100%, 0 100%, 0 45%, 5% 0);
+  }
+  .gradient-box{
+    clip-path: polygon(15% 0, 100% 0, 100% 90%, 85% 100%, 0 100%, 0 15%);
+    -webkit-clip-path: polygon(15% 0, 100% 0, 100% 90%, 85% 100%, 0 100%, 0 15%);
+    width: 400px;
+    height: 400px;
+  }
+  .polygon-box{
+    clip-path: polygon(15% 0, 100% 0, 100% 90%, 85% 100%, 0 100%, 0 15%);
+    -webkit-clip-path: polygon(15% 0, 100% 0, 100% 90%, 85% 100%, 0 100%, 0 15%);
+    border: solid 20px #151A20;
+    width: 350px;
+    height: 350px;
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .img-box{
+    clip-path: polygon(15% 0, 100% 0, 100% 90%, 85% 100%, 0 100%, 0 15%);
+    -webkit-clip-path: polygon(15% 0, 100% 0, 100% 90%, 85% 100%, 0 100%, 0 15%);
+    max-width:100%;
+    max-height:100%;
+    width: auto;
+    height: 100%;
+    left: 0;
+  }
+  /* END BOX */
   #page2 > div, #page5 > div {
   margin-left:5rem;
   margin-right:5rem;
@@ -491,24 +534,21 @@ body,html {
   margin-right:300px;
   text-transform:uppercase;
   }
-  #page3-text, #page8-text, #page9-text, #about-us-text, #page13-text{
+  #page3-text, #page6-text, #page8-text, #page9-text, #about-us-text, #page-header-text{
     text-align: center;
     font-size: 20px;
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 0px;
   }
-  #page6-text, #about-us-text{
-    text-align: left;
-    font-size: 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-bottom: 0px;
-  }
-  #page3-content, #page6-content, #page7-content, #page8-content, #page9-content, #about-us-content{
+  #page3-content, #page6-content, #page7-content, #page8-content, #page9-content, #about-us-content, #page-header-content{
     text-align: center;
     padding-top: 100px;
     font-size: 20px;
+    overflow: hidden;
+  }
+  #page6-text, #page4-text, #about-us-text, #page-header-text, #page-header-content{
+    text-align: left;
   }
   #page4-navbar{
     display: flex;
@@ -548,8 +588,35 @@ body,html {
     margin-left: 20rem;
     margin-right: 20rem;
   }
+  #page13-text{
+    text-align: center;
+    font-size: 23px;
+  }
+  #page13-btn{
+    width: 75px;
+    height: 75px;
+    margin: 10px;
+    font-size: 20px;
+    line-height: 75px;
+  }
+  #page14-content, #page-header-content{
+    padding-left: 200px;
+    padding-right: 70rem;
+    padding-bottom: 100px;
+  }
+  #page14-content{
+    background-image: url(../images/image13.png);
+    overflow: hidden;
+    background-position-x: right 20rem;
+    background-size: 434px 575px;
+    background-repeat: no-repeat;
+  }
   .bg-dark{
-    background-color: rgba(6, 7, 10, 1) !important;
+    background: #929296;
+    background: -webkit-linear-gradient(to top, #929296 0%, #13161D 5%, #07080A 100%);
+    background: -moz-linear-gradient(to top, #929296 0%, #13161D 5%, #07080A 100%);
+    background: linear-gradient(to top, #929296 0%, #13161D 5%, #07080A 100%);    
+    border-color: rgba(6, 7, 10, 1) !important;
     color: white;
     box-shadow: 0px 5px 0px 0px rgba(139, 140, 142, 1),0px -5px 0px 0px rgba(6, 7, 10, 1);
   }
@@ -558,26 +625,63 @@ body,html {
     height: 60px !important;
     padding: 10px;
   }
-  .input-container {
-    display: flex;
+  .mx-auto{
+    margin-left: 50px !important;
+    margin-bottom: 10px !important;
+  }
+  .input-group-text, .form-control{
+    border: 0px solid #000000 !important;
+  }
+  .sign-up-btn, .sign-up-btn > i {
+    background-color:#12181E;
+    border: none;
+    color: #555555;
+    width:30px;
+    height:30px;
+    text-align:center;
+    text-decoration:none;
+    display:inline-block;
+    font-size: 30px;
+    cursor:pointer;
+    margin:10px;
+    filter: drop-shadow(0px 10px 5px rgba(0,0,0,0.1))
+  }
+  .sign-up-btn:hover, .sign-up-btn:hover > i {
+    background-color:#555555;
+    color:#FD000C;
+  }
+  #page1, #page2, #page3, #page4, #page5, #page6, #page7, #page8, #page9, #page10{
+    overflow: hidden;
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(200, 36, 45, 0.9) 0%, rgba(21, 26, 32, 0.9) 100%);
+    overflow: hidden;
     width: 100%;
-    margin-bottom: 15px;
+    height: 100%;
+    transition: .5s ease;
   }
   
-  /* Style the form icons */
-  .icon {
-    padding: 10px;
-    min-width: 50px;
-    text-align: center;
-  }
-  
-  /* Style the input fields */
-  .input-field {
+  .container:hover .overlay {
+    bottom: 0;
+    height: 100%;
     width: 100%;
-    padding: 10px;
-    outline: none;
+    clip-path: polygon(15% 0, 100% 0, 100% 90%, 85% 100%, 0 100%, 0 15%);
+    -webkit-clip-path: polygon(15% 0, 100% 0, 100% 90%, 85% 100%, 0 100%, 0 15%);
   }
   
-  .input-field:focus {
-    border: 2px solid rgb(0, 0, 0);
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: left;
   }
