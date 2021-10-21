@@ -73,13 +73,25 @@ $(document).ready(function() {
       $('.bounceInUp').removeClass("animate__bounceInUp");
       $('.bounceInRight').removeClass("animate__bounceInRight");
       }
-		if(pos_body>2090){
+		if(pos_body>2430){
       $('.flipInX').addClass("animate__flipInX");
-      $(".flipInX").css("overflow","visible");
 		}
 		else{
       $('.flipInX').removeClass("animate__flipInX");
-      $(".flipInX").css("overflow","hidden");
+		}
+      if(pos_body>2240){
+      $('.fadeInUp').addClass("animate__fadeInUp");
+		}
+		else{
+      $('.fadeInUp').removeClass("animate__fadeInUp");
+		}
+      if(pos_body>4380){
+      $('.slideInRight').addClass("animate__slideInRight");
+      $('.slideInRight').css("overflow","visible");
+		}
+		else{
+      $('.slideInRight').removeClass("animate__slideInRight");
+      $('.slideInRight').css("overflow","hidden");
 		}
 		if(pos_body>5000){
       $('.slideInDown').addClass("animate__fadeInLeft");

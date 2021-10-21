@@ -2,16 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="./images//logo.png"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" defer></script>
     <script src="https://git.blivesta.com/chaffle/chaffle.min.js"></script>
-    <script src="https://kit.fontawesome.com/5dc9495616.js" crossorigin="anonymous"></script>
-    <script src="./js/main.js" defer></script>
-    <script src="./js/animateOnScroll.js" defer></script>
     <script type = "text/javascript">
         function getPositionXY(element) {
             var rect = element.getBoundingClientRect();
@@ -19,11 +13,45 @@
         }
     </script>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/popup_chat.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
-    <title>Demo Project</title>
+    <title>Gamneu</title>
 
 </head>
 <body onmouseover="getPositionXY(this)">
+    <div class="fabs">
+        <div class="chat">
+          <div class="chat_header">
+            <span id="chat_head">Live Chat</span>
+            <div class="chat_loader"></div>
+            <div class="chat_option"><i class="fas fa-ellipsis-v"></i>
+              <ul>
+                <li><span class="chat_color" style="border:solid 5px #2196F3" color="blue"></span></li>
+                <li><span class="chat_color" style="border:solid 5px #00bcd4" color="cyan"></span></li>
+                <li><span class="chat_color" style="border:solid 5px #607d8b" color="blue-grey"></span></li>
+                <li><span class="chat_color" style="border:solid 5px #4caf50" color="green"></span></li>
+                <li><span class="chat_color" style="border:solid 5px #8bc34a" color="light-green"></span></li>
+                <li><span class="chat_color" style="border:solid 5px #cddc39" color="lime"></span></li>
+                <li><span class="chat_color" style="border:solid 5px #ffc107" color="amber"></span></li>
+                <li><span class="chat_color" style="border:solid 5px #ff5722" color="deep-orange"></span></li>
+                <li><span class="chat_color" style="border:solid 5px #f44336" color="red"></span></li>
+              </ul>
+            </div>
+          </div>
+          <div id="chat_converse" class="chat_converse">
+            <span class="chat_msg_item chat_msg_item_admin">
+                  <div class="chat_avatar">
+                    <i class="fas fa-headset"></i>
+                  </div>Xin chào! Nếu cần giúp đỡ hãy nhập /help để xem các lệnh khả dụng</span>
+          </div>
+          <div class="fab_field">
+            <a id="fab_listen" class="fab"><i class="fas fa-microphone-alt"></i></a>
+            <a id="fab_send" class="fab"><i class="fas fa-paper-plane"></i></a>
+            <textarea id="chatSend" name="chat_message" placeholder="Write a message" class="chat_field chat_message"></textarea>
+          </div>
+        </div>
+        <a id="prime" class="fab"><i class="fas fa-plus"></i></a>
+    </div>
     <div id="page1" class="bg-image img1">
         <div id="navbar">
             <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
@@ -48,7 +76,7 @@
                         <a class="nav-link active" href="#" data-chaffle="en">FAQS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#" data-chaffle="en">BLOG</a>
+                        <a class="nav-link active" href="./blog.html" data-chaffle="en">BLOG</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="contact_us.html" data-chaffle="en">CONTACT</a>
@@ -179,7 +207,7 @@
     <div id="page4" class="bg-image img4">
         <div id="page4-navbar">
             <nav class="navbar navbar-expand-sm navbar-dark shadow-5-strong justify-content-center" style="color: white;">
-                <a class="navbar-brand mr-auto" href="#" style="font-size: 30px; margin-right: 5rem !important;">Browse top games by category</a>
+                <a class="navbar-brand mr-auto animate__animated fadeInUp" href="#" style="font-size: 30px; margin-right: 5rem !important;">Browse top games by category</a>
                 <ul class="navbar-nav ml-auto" style="margin-left: 5rem !important;">
                     <li class="nav-item">
                         <a class="nav-link active" href="#" data-chaffle="en">Bloons</a>
@@ -325,21 +353,21 @@
             <hr style="border-top: 3px solid red; width: 110px">
         </div>
         <div id="page6-content" style="margin-left: 500px; margin-right: 500px">
-            <div class="grid2x1-parent" style="margin-top: 50px;">
+            <div class="grid2x1-parent animate__animated slideInRight" style="margin-top: 50px;">
                 <div class="grid2x1-div1 hexagon-polygon-box" style="width: 200px; height: 200px"><img src="images/avatar.png" style="margin-top: 30px"></div>
                 <div class="grid2x1-div2 text-polygon-box" style="width: 600px; height: 200px">
                     <p id="page6-text" style="margin-left: 30px; margin-top: 30px;">Nijus Kuil</p><br>
                     <p style="margin-left: 30px; text-align: left;">Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem dummy text of the</p>
                 </div>
             </div> 
-            <div class="grid2x1-parent" style="margin-top: 50px;">
+            <div class="grid2x1-parent animate__animated animate__delay-1s slideInRight" style="margin-top: 50px;">
                 <div class="grid2x1-div1 hexagon-polygon-box" style="width: 200px; height: 200px"><img src="images/avatar.png" style="margin-top: 30px"></div>
                 <div class="grid2x1-div2 text-polygon-box" style="width: 600px; height: 200px">
                     <p id="page6-text" style="margin-left: 30px; margin-top: 30px;">Kijjsun Goofs<br>
                     <p style="margin-left: 30px; text-align: left;">Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem dummy text of the</p>
                 </div>
             </div> 
-            <div class="grid2x1-parent" style="margin-top: 50px;">
+            <div class="grid2x1-parent animate__animated animate__delay-2s slideInRight" style="margin-top: 50px;">
                 <div class="grid2x1-div1 hexagon-polygon-box" style="width: 200px; height: 200px"><img src="images/avatar.png" style="margin-top: 30px"></div>
                 <div class="grid2x1-div2 text-polygon-box" style="width: 600px; height: 200px">
                     <p id="page6-text" style="margin-left: 30px; margin-top: 30px;">Nijus Kuil</p><br>
@@ -498,6 +526,7 @@
             <div>Copyright © 2021. All Rights Reserved.</div>
         </div>
     </div>
+</div>
     <!-- Script -->
     <script>
         var elements = document.querySelectorAll('[data-chaffle]');
@@ -519,5 +548,10 @@
           }, 8000)
         });
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://kit.fontawesome.com/5dc9495616.js" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/animateOnScroll.js"></script>
 </body>
 </html>
